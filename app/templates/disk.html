@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block new_content %}
+<table class="table table-striped">
+    <tr>
+        <td>总空间</td>
+        <td>{{ disks.total}}G</td>
+    </tr>
+    <tr>
+        <td>已使用</td>
+        <td>{{ disks.used}}G</td>
+    </tr>
+    <tr>
+        <td>空闲</td>
+        <td>{{ disks.free}}G</td>
+    </tr>
+    <tr>
+        <td>百分比(%)</td>
+        <td>{{ '%s%%' % disks.percent}}</td>
+    </tr>
+
+</table>
+{% endblock %}
+
